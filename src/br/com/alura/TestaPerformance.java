@@ -12,9 +12,7 @@ public class TestaPerformance {
         Collection<Integer> numerosSet = new HashSet<>();
 
         action(numerosList);
-
         System.out.println("------------------------------------------------------------");
-
         action(numerosSet);
 
     }
