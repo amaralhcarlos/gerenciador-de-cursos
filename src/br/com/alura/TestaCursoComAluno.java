@@ -1,5 +1,8 @@
 package br.com.alura;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class TestaCursoComAluno {
 
     public static void main(String[] args) {
@@ -27,9 +30,19 @@ public class TestaCursoComAluno {
         System.out.println("O aluno " + a1 + " está matrículado? " + javaColecoes.estaMatriculado(a1));
 
 
-        //Resultado: FALSO caso o método equals não tenha sido sobrescrito na classe Aluno
+        //Resultado: FALSO caso os métodos equals e hashcode não tenham sido sobrescritos na classe Aluno
         Aluno novoTurini = new Aluno("Rodrigo Turini", 34672);
         System.out.println("O aluno " + novoTurini + " está matrículado? " + javaColecoes.estaMatriculado(novoTurini));
+
+
+        //Usando Iterator para percorrer Coleções (Mais comum antes do Java 5)
+        Set<Aluno> alunos = javaColecoes.getAlunos();
+        Iterator iterador = alunos.iterator();
+
+        System.out.println("Imprimindo alunos usando Iterator");
+        while (iterador.hasNext()){
+            System.out.println(iterador.next());
+        }
 
 
     }

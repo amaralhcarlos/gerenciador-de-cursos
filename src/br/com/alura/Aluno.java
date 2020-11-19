@@ -7,8 +7,13 @@ public class Aluno {
     private int numeroMatricula;
 
     public Aluno(String nome, int numeroMatricula) {
+
+        if(nome == null){
+            throw new NullPointerException("Nome do aluno não pode ser nulo");
+        }
         this.nome = nome;
         this.numeroMatricula = numeroMatricula;
+
     }
 
     public String getNome() {
