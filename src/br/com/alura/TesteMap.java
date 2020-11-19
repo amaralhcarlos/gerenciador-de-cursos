@@ -11,7 +11,6 @@ public class TesteMap {
         nomesParaIdade.put("Adriano", 25);
         nomesParaIdade.put("Alberto", 33);
         nomesParaIdade.put("Guilherme", 26);
-        // ...
 
         nomesParaIdade.keySet().forEach(key->{
             System.out.println(key);
